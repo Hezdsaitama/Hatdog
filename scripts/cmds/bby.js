@@ -156,17 +156,7 @@ module.exports.onReply = async ({
         return api.sendMessage(`Error: ${err.message}`, event.threadID, event.messageID);
     }
 };
-
-module.exports.onChat = async ({
-    api,
-    event,
-    message
-}) => {
-    try {
-        const body = event.body ? event.body?.toLowerCase() : ""
-        if (body.startsWith("baby") || body.startsWith("bby") || body.startsWith("rocky") || body.startsWith("jan") || body.startsWith("babu") || body.startsWith("janu")) {
-            const arr = body.replace(/^\S+\s*/, "")
-            const randomReplies = ["ডাকো কেন 🥺 প্রেম করবা নাকি 😞", "বলো না ভালোবাসি🥹..!!", "ওই জান কাছে আসো 🫦😩", "আলাবু বলো সোনা 🤧", "রকি রে দেখছো? 🥺 তাকে কোথাও খুজে পাচ্ছি না 😩", "চুম্মা দাও ৫ টাকা দিবো🥺🤌", "হ্যাঁ গো জান বলো 🙂", "ডাকিস না, তুই পচা 😼", "তুমি কি আমাকে পসন্দ করো 🙂", "ডুম ডুম টেডাও 😬"];
+"Bakit ka tumatawag? 🥺 Makikipaglandian ka ba? 😞", "Sabihin mo na mahal mo ako 🥹..!!", "Hoy mahal, lumapit ka 🫦😩", "Sabihin mong love mo ako, sinta 🤧", "Rocky, nakikita mo ba siya? 🥺 Hindi ko siya mahanap kahit saan 😩", "Bigyan mo ako ng kiss, bibigyan kita ng 5 pesos 🥺🤌", "Oo mahal, anong sabi mo 🙂", "Huwag mo akong tawagin, bwisit ka 😼", "Gusto mo ba ako? 🙂", "Galaw galaw naman 😬"];
             if (!arr) {
 
                 await api.sendMessage(randomReplies[Math.floor(Math.random() * randomReplies.length)], event.threadID, (error, info) => {

@@ -30,7 +30,18 @@ module.exports.onStart = async ({
 
     try {
         if (!args[0]) {
-            const ran = ["Bolo baby", "hum", "type help baby", "type !baby hi"];
+            const ran = [
+    "Bakit ka tumatawag? 🥺 Makikipaglandian ka ba? 😞",
+    "Sabihin mo na mahal mo ako 🥹..!!",
+    "Hoy mahal, lumapit ka 🫦😩",
+    "Sabihin mong love mo ako, sinta 🤧",
+    "Rocky, nakikita mo ba siya? 🥺 Hindi ko siya mahanap kahit saan 😩",
+    "Bigyan mo ako ng kiss, bibigyan kita ng 5 pesos 🥺🤌",
+    "Oo mahal, anong sabi mo 🙂",
+    "Huwag mo akong tawagin, bwisit ka 😼",
+    "Gusto mo ba ako? 🙂",
+    "Galaw galaw naman 😬"
+];
             return api.sendMessage(ran[Math.floor(Math.random() * ran.length)], event.threadID, event.messageID);
         }
 
